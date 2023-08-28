@@ -1,0 +1,50 @@
+[
+    {
+      "id": "document",
+      "name": "CZML Path",
+      "version": "1.0",
+      "clock": {
+        "interval": "2072-09-04T10:00:00Z/2072-09-04T15:00:00Z",
+        "currentTime": "2072-09-04T10:00:00Z",
+        "multiplier": 10
+      }
+    },
+{
+        "id": "path1",
+        "name": "BLOQUE 2 - Laboratorio de Control Biologico, Herbario. Aulas B2-1 y B2-2",
+        "description": "<p>  Nivel: 1  <p>- Aula B2-1 <br>- Aula B2-2 <br>- Laboratorio de Control Biologico  <br>-  Herbario <p>",
+        "availability": "2072-09-04T10:00:00Z/2072-09-04T15:00:00Z",
+        "label": {
+          "fillColor": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "font": "12pt Lucida Console",
+          "horizontalOrigin": "LEFT",
+          "pixelOffset": {
+            "cartesian2": [8, 0]
+          },
+          "style": "FILL",
+          "text": "BLOQUE 2 - Laboratorio de Control Biologico, Herbario. Aulas B2-1 y B2-2",
+          "showBackground": true,
+          "backgroundColor": {
+            "rgba": [255, 89, 57, 255]
+          }
+        },
+        "point": {
+          "color": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "outlineColor": {
+            "rgba": [255, 0, 0, 255]
+          },
+          "outlineWidth": 4,
+          "pixelSize": 20,
+          "eyeOffset": {
+            "cartesian": [0.0, 0.0, 0.0]
+          }
+        },
+        "position": {
+          "cartographicDegrees": [-73.5845621916, 4.0745851159, 16]
+        }
+      }
+]

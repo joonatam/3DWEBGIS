@@ -1,0 +1,136 @@
+[
+    {
+      "id": "document",
+      "name": "CZML Path",
+      "version": "1.0",
+      "clock": {
+        "interval": "2012-09-04T10:00:00Z/2012-09-04T15:00:00Z",
+        "currentTime": "2012-09-04T10:00:00Z",
+        "multiplier": 10
+      }
+    },
+    {
+        "id": "path1",
+        "name": "BLOQUE 1 - Laboratorio de Quimica",
+        "description": "<p> Nivel: 1 <p>- Laboratorio de Quimica </p>",
+        "availability": "2012-09-04T10:00:00Z/2012-09-04T15:00:00Z",
+        "label": {
+          "fillColor": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "font": "12pt Lucida Console",
+          "horizontalOrigin": "LEFT",
+          "pixelOffset": {
+            "cartesian2": [8, 0]
+          },
+          "style": "FILL",
+          "text": "BLOQUE 1 - Laboratorio de Quimica",
+          "showBackground": true,
+          "backgroundColor": {
+            "rgba": [255, 89, 57, 255]
+          }
+        },
+        "point": {
+          "color": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "outlineColor": {
+            "rgba": [255, 0, 0, 255]
+          },
+          "outlineWidth": 4,
+          "pixelSize": 20,
+          "eyeOffset": {
+            "cartesian": [0.0, 0.0, 0.0]
+          }
+        },
+        "position": {
+          "cartographicDegrees": [-73.584647342932, 4.074754920817, 6]
+        }
+      },
+    {
+      "id": "path",
+      "name": "BLOQUE 1 - Laboratorio de Quimica",
+      "description": "<p> Nivel: 1 <p>- Laboratorio de Quimica </p>",
+      "availability": "2012-09-04T10:00:00Z/2012-09-04T15:00:00Z",
+      "path": {
+          "material": {
+            "polylineOutline": {
+              "color": {
+                "rgba": [255, 255, 255, 255]
+              },
+              "outlineColor": {
+                "rgba": [255, 0, 0, 255]
+              },
+              "outlineWidth": 5
+            }
+          },
+          "width": 10,
+          "leadTime": 10,
+          "trailTime": 1000,
+          "resolution": 3
+        },
+        "point": {
+                  "color": {
+                    "rgba": [255, 255, 255, 255]
+                  },
+                  "outlineColor": {
+                    "rgba": [255, 0, 0, 255]
+                  },
+                  "outlineWidth": 4,
+                  "pixelSize": 20,
+                  "eyeOffset": {
+                    "cartesian": [0.0, 0.0, 0.0]
+                  }
+                },
+      "position": {
+        "epoch": "2012-09-04T10:00:00Z",
+        "cartographicDegrees": [
+          0,
+          -73.58567331010,
+          4.07509451111,
+          0.00000000000,
+          10,
+          -73.58564116250,
+          4.07505775715,
+          0.00000000000,
+          20,
+          -73.58550405440,
+          4.07487799292,
+          0.00000000000,
+          30,
+          -73.58548852930,
+          4.07485893606,
+          0.00000000000,
+          40,
+          -73.58538934330,
+          4.07473718617,
+          0.00000000000,
+          50,
+          -73.58527471460,
+          4.07468459181,
+          0.00000000000,
+          60,
+          -73.58518813410,
+          4.07464627389,
+          0.00000000000,
+          70,
+          -73.58493263000,
+          4.07465436251,
+          0.00000000000,
+          80,
+          -73.58466715270,
+          4.07466347392,
+          0.00000000000,
+          90,
+          -73.584640877742,
+          4.074666586635,
+          0,
+          100,
+          -73.584643615014,
+          4.074706003348,
+          0
+
+        ]
+      }
+    }
+]

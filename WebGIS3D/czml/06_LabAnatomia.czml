@@ -1,0 +1,116 @@
+[
+            {
+              "id": "document",
+              "name": "CZML Path",
+              "version": "1.0",
+              "clock": {
+                "interval": "2012-06-04T10:00:00Z/2012-06-04T15:00:00Z",
+                "currentTime": "2012-06-04T10:00:00Z",
+                "multiplier": 10
+              }
+            },
+            {
+                    "id": "path1",
+                    "name": "BLOQUE 6 - Laboratorio de Anatomia y Morfologia Animal, Aulas B6-1 y B6-2",
+                                  "description":
+                                          "<p> Nivel: 1  <p>- Aula B6-1 <br>- Aula B6-2<br>- Laboratorio de Anatomia y Morfologia Animal </p>",
+                                  "availability": "2012-06-04T10:00:00Z/2012-06-04T15:00:00Z",
+                    "label": {
+                      "fillColor": {
+                        "rgba": [255, 255, 255, 255]
+                      },
+                      "font": "12pt Lucida Console",
+                      "horizontalOrigin": "LEFT",
+                      "pixelOffset": {
+                        "cartesian2": [8, 0]
+                      },
+                      "style": "FILL",
+                      "text": "BLOQUE 6 - Laboratorio de Anatomia y Morfologia Animal, Aulas B6-1 y B6-2",
+                      "showBackground": true,
+                      "backgroundColor": {
+                        "rgba": [255, 89, 57, 255]
+                      }
+                    },
+                    "point": {
+                      "color": {
+                        "rgba": [255, 255, 255, 255]
+                      },
+                      "outlineColor": {
+                        "rgba": [255, 0, 0, 255]
+                      },
+                      "outlineWidth": 4,
+                      "pixelSize": 20,
+                      "eyeOffset": {
+                        "cartesian": [0.0, 0.0, 0.0]
+                      }
+                    },
+                    "position": {
+                      "cartographicDegrees": [-73.584647342932, 4.074754920817, 6]
+                    }
+                  },
+            {
+              "id": "path",
+              "name": "BLOQUE 6 - Laboratorio de Anatomia y Morfologia Animal, Aulas B6-1 y B6-2",
+              "description":
+                      "<p> Nivel: 1  <p>- Aula B6-1 <br>- Aula B6-2<br>- Laboratorio de Anatomia y Morfologia Animal </p>",
+              "availability": "2012-06-04T10:00:00Z/2012-06-04T15:00:00Z",
+               "path": {
+                    "material": {
+                      "polylineOutline": {
+                        "color": {
+                          "rgba": [255, 255, 255, 255]
+                        },
+                        "outlineColor": {
+                          "rgba": [255, 0, 0, 255]
+                        },
+                        "outlineWidth": 5
+                      }
+                    },
+                    "width": 10,
+                    "leadTime": 10,
+                    "trailTime": 1000,
+                    "resolution": 3
+                  },
+                  "point": {
+                                    "color": {
+                                      "rgba": [255, 255, 255, 255]
+                                    },
+                                    "outlineColor": {
+                                      "rgba": [255, 0, 0, 255]
+                                    },
+                                    "outlineWidth": 4,
+                                    "pixelSize": 20,
+                                    "eyeOffset": {
+                                      "cartesian": [0.0, 0.0, 0.0]
+                                    }
+                                  },
+              "position": {
+                "epoch": "2012-06-04T10:00:00Z",
+                "cartographicDegrees": [
+                                     0,	    -73.58567331010,	4.07509451111,	0.00000000000,
+                                     10,	-73.58564116250,	4.07505775715,	0.00000000000,
+                                     20,	-73.58550405440,	4.07487799292,	0.00000000000,
+                                     30,	-73.58548852930,	4.07485893606,	0.00000000000,
+                                     40,	-73.58538934330,	4.07473718617,	0.00000000000,
+                                     50,	-73.58527471460,	4.07468459181,	0.00000000000,
+                                     60,	-73.58518813410,	4.07464627389,	0.00000000000,
+                                     70,	-73.58493263000,	4.07465436251,	0.00000000000,
+                                     80,	-73.58492481750,	4.07449030004,	0.00000000000,
+                                     90,	-73.58492394180,	4.07447191059,	0.00000000000,
+                                     100,	-73.58491351000,	4.07422633069,	0.00000000000,
+                                     110,	-73.58488558410,	4.07414185651,	0.00000000000,
+                                     120,	-73.58484629390,	4.07402628406,	0.00000000000,
+                                     130,	-73.58482895170,	4.07392750915,	0.00000000000,
+                                     140,	-73.58481328180,	4.07387818997,	0.00000000000,
+                                     150,	-73.58479573850,	4.07375047579,	0.00000000000,
+                                     160,	-73.58476371760,	4.07356985741,	0.00000000000,
+                                     170,	-73.58469768470,	4.07351159309,	0.00000000000,
+                                     180,	-73.58463026620,	4.07345210614,	0.00000000000
+
+
+
+
+                ]
+              }
+            }
+]

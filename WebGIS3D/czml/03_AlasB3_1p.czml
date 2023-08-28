@@ -1,0 +1,147 @@
+[
+            {
+              "id": "document",
+              "name": "CZML Path",
+              "version": "1.0",
+              "clock": {
+                "interval": "2012-03-04T10:00:00Z/2012-03-04T15:00:00Z",
+                "currentTime": "2012-03-04T10:00:00Z",
+                "multiplier": 10
+              }
+            },
+            {
+                    "id": "path1",
+                    "name": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+                                  "description":
+                                          "<p> Nivel: 1 <p>- Aula B3-1 <br>- Aula B3-2 <br>- Aula B3-3 </p>",
+                                  "availability": "2012-03-04T10:00:00Z/2012-03-04T15:00:00Z",
+                    "label": {
+                      "fillColor": {
+                        "rgba": [255, 255, 255, 255]
+                      },
+                      "font": "12pt Lucida Console",
+                      "horizontalOrigin": "LEFT",
+                      "pixelOffset": {
+                        "cartesian2": [8, 0]
+                      },
+                      "style": "FILL",
+                      "text": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+                      "showBackground": true,
+                      "backgroundColor": {
+                        "rgba": [255, 89, 57, 255]
+                      }
+                    },
+                    "point": {
+                      "color": {
+                        "rgba": [255, 255, 255, 255]
+                      },
+                      "outlineColor": {
+                        "rgba": [255, 0, 0, 255]
+                      },
+                      "outlineWidth": 4,
+                      "pixelSize": 20,
+                      "eyeOffset": {
+                        "cartesian": [0.0, 0.0, 0.0]
+                      }
+                    },
+                    "position": {
+                      "cartographicDegrees": [-73.584755038, 4.0743014977, 6]
+                    }
+                  },
+            {
+              "id": "path",
+              "name": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+              "description":
+                      "<p> Nivel: 1 <p>- Aula B3-1 <br>- Aula B3-2 <br>- Aula B3-3 </p>",
+              "availability": "2012-03-04T10:00:00Z/2012-03-04T15:00:00Z",
+               "path": {
+                    "material": {
+                      "polylineOutline": {
+                        "color": {
+                          "rgba": [255, 255, 255, 255]
+                        },
+                        "outlineColor": {
+                          "rgba": [255, 0, 0, 255]
+                        },
+                        "outlineWidth": 5
+                      }
+                    },
+                    "width": 10,
+                    "leadTime": 10,
+                    "trailTime": 1000,
+                    "resolution": 3
+                  },
+                  "point": {
+                                    "color": {
+                                      "rgba": [255, 255, 255, 255]
+                                    },
+                                    "outlineColor": {
+                                      "rgba": [255, 0, 0, 255]
+                                    },
+                                    "outlineWidth": 4,
+                                    "pixelSize": 20,
+                                    "eyeOffset": {
+                                      "cartesian": [0.0, 0.0, 0.0]
+                                    }
+                                  },
+              "position": {
+                "epoch": "2012-03-04T10:00:00Z",
+                "cartographicDegrees": [
+                   0,
+                   -73.58567331010,
+                   4.07509451111,
+                   0.00000000000,
+                   10,
+                   -73.58564116250,
+                   4.07505775715,
+                   0.00000000000,
+                   20,
+                   -73.58550405440,
+                   	4.07487799292,
+                   	0.00000000000,
+                   30,
+                   -73.58548852930,
+                   4.07485893606,
+                   0.00000000000,
+                   40,
+                   -73.58538934330,
+                   4.07473718617,
+                   0.00000000000,
+                   50,
+                   -73.58527471460,
+                   4.07468459181,
+                   0.00000000000,
+                   60,
+                   -73.58518820010,
+                   4.07464489695,
+                   0.00000000000,
+                   70,
+                   -73.58493263000,
+                   4.07465436251,
+                   0.00000000000,
+                   80,
+                   -73.58492481750,
+                   4.07449030004,
+                   0.00000000000,
+                   90,
+                   -73.58491369890,
+                   4.07425680894,
+                   0.00000000000,
+                   100,
+                   -73.58491351000,
+                   4.07422633069,
+                   0.00000000000,
+                   110,
+                   -73.58471777490,
+                   4.07423268442,
+                   0.00000000000,
+                   120,
+                   -73.58471797950,
+                   4.07423653716,
+                   0.00000000000
+
+
+                ]
+              }
+            }
+]

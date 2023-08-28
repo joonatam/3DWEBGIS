@@ -1,0 +1,56 @@
+[
+  {
+    "id": "document",
+    "name": "CZML Path",
+    "version": "1.0",
+    "clock": {
+      "interval": "2026-09-04T10:00:00Z/2026-09-04T15:00:00Z",
+      "currentTime": "2026-09-04T10:00:00Z",
+      "multiplier": 10
+    }
+  },
+  {
+    "id": "path1",
+    "name": "BLOQUE 4 - Ing Ambiental, Ing de Procesos y Laboratorios de Fisica",
+    "description": "<p> Nivel: 1 </p><p>- Oficina de Ing Ambiental e Ing de Procesos <br>- Laboratorio 1  de Fisica <br>- Laboratorio 2  de Fisica</p>",
+    "availability": "2026-09-04T10:00:00Z/2026-09-04T15:00:00Z",
+    "label": {
+      "fillColor": {
+        "rgba": [255, 255, 255, 255]
+      },
+      "font": "12pt Lucida Console",
+      "horizontalOrigin": "LEFT",
+      "pixelOffset": {
+        "cartesian2": [8, 0]
+      },
+      "style": "FILL",
+      "text": "BLOQUE 4 - Ing Ambiental, Ing de Procesos y Laboratorios de Fisica",
+      "showBackground": true,
+      "backgroundColor": {
+        "rgba": [255, 89, 57, 255]
+      }
+    },
+    "point": {
+      "color": {
+        "rgba": [255, 255, 255, 255]
+      },
+      "outlineColor": {
+        "rgba": [255, 0, 0, 255]
+      },
+      "outlineWidth": 4,
+      "pixelSize": 20,
+      "eyeOffset": {
+        "cartesian": [0.0, 0.0, 0.0]
+      }
+    },
+    "position": {
+      "cartographicDegrees": [-73.5845491544, 4.0739748425, 16]
+    }
+  }
+]
+
+
+
+
+
+

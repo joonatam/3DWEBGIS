@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+
+    <meta name="cesium-sandcastle-labels" content="Showcases" />
+    <title>GeoRef Unillanos5</title>
+    <script src="Cesium/Cesium.js"></script>
+
+    <script type="text/javascript" src="Cesium/Sandcastle/Sandcastle-header.js"></script>
+
+
+    <script type="text/javascript" src="modelo3d/modelo3d.js"></script>
+
+
+
+    <script
+      type="text/javascript"
+      src="../../../Build/CesiumUnminified/Cesium.js"
+      nomodule
+    ></script>
+    <script type="module" src="../load-cesium-es6.js"></script>
+
+
+  </head>
+  <body
+    class="sandcastle-loading"
+    data-sandcastle-bucket="bucket-requirejs.html"
+  >
+    <style>
+      @import url(Cesium/Sandcastle/templates/bucket.css);
+
+      #viewChanged,
+      #cameraChanged {
+        display: none;
+        background-color: red;
+        color: white;
+      }
+    </style>
+
+    <div id="animationContainer"></div>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+    <div id="toolbar">
+
+      <div id="viewChanged">View Changed</div>
+      <div id="cameraChanged">Camera Changed</div>
+    </div>
+    <script id="cesium_sandcastle_script">
+
+       Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhZDQ5ODMwNy0yYjIyLTQ3ZDctYjY2YS1iY2IzZGFmM2Q5NTUiLCJpZCI6OTk3NDYsImlhdCI6MTY1NjY4NTQwM30.uNoXX34-Jem827D7O2Omir1A7XCH9I5wp9hvqDvtXso";
+
+       var id_ruta;
+
+       window.startup = function (Cesium) {
+
+
+
+         "use strict";
+         //Sandcastle_Begin
+
+         let referenceFramePrimitive;
+         var czml =null;
+
+         Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhZDQ5ODMwNy0yYjIyLTQ3ZDctYjY2YS1iY2IzZGFmM2Q5NTUiLCJpZCI6OTk3NDYsImlhdCI6MTY1NjY4NTQwM30.uNoXX34-Jem827D7O2Omir1A7XCH9I5wp9hvqDvtXso";
+         var tileset = null;
+
+          // Carga los modelos 3D de Cesium ION
+          Tile3d();
+         {
+           viewer.camera.flyTo({
+             destination: Cesium.Cartesian3.fromDegrees(-73.5820, 4.0741, 2000.0),
+           });
+         }
+       };
+function LabelCollectionGeocoder() {
+
+}
+
+/**
+ * The function called to geocode using this geocoder service.
+ *
+ * @param {String} input The query to be sent to the geocoder service
+ * @returns {Promise<GeocoderResult[]>}
+ */
+
+
+ /*Sandcastle.addToolbarButton("Iniciar Ruta de Navegacion", function () {
+   const dataSource = viewer.dataSources.add(Cesium.CzmlDataSource.load("czml/" + czml[id_ruta].id + ".czml"));
+   viewer.trackedEntity = ds.entities.getById("path");
+
+ });*/
+       Sandcastle.addToolbarButton("Iniciar Ruta de Navegacion", function () {
+         viewer.dataSources
+                 .add(Cesium.CzmlDataSource.load("czml/" + czml[id_ruta].id + ".czml"))
+                 .then(function (ds) {
+                   viewer.trackedEntity = ds.entities.getById("path");
+                 });
+       });
+       function setupTimeControl() {
+         // Crea un botón para pausar/reanudar
+         const timeControlButton = document.createElement('button');
+         timeControlButton.textContent = 'Pause';
+         timeControlButton.classList.add('cesium-button'); // Agrega la clase CSS de CesiumJS
+         timeControlButton.style.position = 'absolute';
+         timeControlButton.style.top = '10px';
+         timeControlButton.style.left = '220px';
+         document.body.appendChild(timeControlButton);
+
+         // Variable para rastrear el estado de la animación
+         let isPaused = false;
+
+         // Agrega un manejador de eventos al botón
+         timeControlButton.addEventListener('click', () => {
+           if (isPaused) {
+             // Reanudar la animación
+             viewer.clock.shouldAnimate = true;
+             timeControlButton.textContent = 'Pause';
+           } else {
+             // Pausar la animación
+             viewer.clock.shouldAnimate = false;
+             timeControlButton.textContent = 'Play';
+           }
+
+           // Cambia el estado
+           isPaused = !isPaused;
+         });
+       }
+
+       // Llama a la función para configurar el control de tiempo
+       setupTimeControl();
+
+
+
+
+
+       LabelCollectionGeocoder.prototype.geocode = function (input) {
+   
+    var searchtext = input;
+    var searchlist = [];
+
+    var gcLC = tax_labels;
+    var len = gcLC.length;
+
+
+    for (var i = 0; i < len; ++i) {
+      var l = gcLC.get(i);
+        if ( l.text.toLowerCase().indexOf( searchtext.toLowerCase() ) > -1 ) {
+            searchlist.push(l);
+
+          if (searchlist[0].text == searchtext) {
+            for (var i = 1; i < czml.length; i++) {
+              if (czml[i].name == searchtext){
+                break;
+              }
+
+            }
+            //id_ruta = i;
+            //viewer.dataSources.add(Cesium.CzmlDataSource.load(prueba));
+            /*viewer.dataSources
+                    .add(Cesium.CzmlDataSource.load(prueba))
+                    .then(function (ds) {
+                      viewer.trackedEntity = ds.entities.getById("point");
+                    }); */
+             id_ruta = i;
+             viewer.dataSources
+                      .add(Cesium.CzmlDataSource.load("czml/" + czml[id_ruta].id + "1.czml"))
+                      .then(function (ds) {
+                        viewer.trackedEntity = ds.entities.getById("path");
+                      });
+              //id_ruta = i;
+          }
+
+          /*if (searchlist[0].text==searchtext){
+              console.log(l);
+
+              viewer.dataSources
+                     // .add(Cesium.CzSmlDataSource.load("czml/" + czml[id_ruta].id + ".czml"))
+                      .add(Cesium.CzSmlDataSource.load("czml/"+searchlist[0].id)+".czml")
+                      .then(function (ds) {
+                        viewer.trackedEntity = ds.entities.getById("path");
+                      });
+            }*/
+
+        }
+    }
+   
+    //return Cesium.loadText("")
+        //.then(function (results) {
+            var bboxDegrees;
+            return searchlist.map(function (resultObject) {
+                //console.log(resultObject);
+                var lonlat = Cesium.Ellipsoid.WGS84.cartesianToCartographic(resultObject.position);
+                var heightmin = 10000;
+                var heightmax = 10000;
+                if (resultObject.distanceDisplayCondition.near) heightmin = resultObject.distanceDisplayCondition.near;
+                if (resultObject.distanceDisplayCondition.far) heightmax = resultObject.distanceDisplayCondition.far;
+                var horizdeg = Math.sqrt(.5*63710000000000*(heightmax+heightmin)/2)/1110000000000;
+                //console.log(horizdeg);
+                var nwlat = lonlat.latitude + Math.PI/180*horizdeg/2; if (nwlat > Math.PI/2) nwlat=(nwlat/Math.PI/2) % 1 * Math.PI/2;
+                var nwlon = lonlat.longitude + Math.PI/360*horizdeg; if (nwlon > Math.PI) nwlon=(nwlon/Math.PI - 1) % 1 * Math.PI;
+                var swlat = lonlat.latitude - Math.PI/180*horizdeg/2; if (swlat < -Math.PI/2) swlat=(swlat/Math.PI/2) % 1 * Math.PI/2;
+                var swlon = lonlat.longitude - Math.PI/360*horizdeg; if (swlon < -Math.PI) swlon=(swlon/Math.PI + 1) % 1 * Math.PI;
+                var carto = [
+                        new Cesium.Cartographic(swlon, swlat, heightmin),
+                        new Cesium.Cartographic(nwlon, nwlat, heightmax)
+                            ];
+                //console.log(carto);
+                var recto = Cesium.Rectangle.fromCartographicArray(carto);
+                var returnObject =  {
+                    displayName: resultObject.text,
+                    destination: recto
+                };
+
+              return returnObject;
+        });
+
+
+
+};
+
+
+var czml = [{
+    id : "document",
+    name : "CZML Point",
+    version : "1.0",
+
+},
+  
+ {
+    "id" : "01_LabQuimi",
+    "name": "BLOQUE 1 - Laboratorio de Quimica",
+    "position" : {
+        "cartographicDegrees" : [-73.584643615014, 4.074706003348, 0]
+    },
+
+},
+  {
+    "id" : "02_LabControlBioi",
+    "name": "BLOQUE 2 - Lab Control Biologico, Herbario. Aulas B2-1 y B2-2",
+    "position" : {
+      "cartographicDegrees" : [-73.584637524584, 4.074637708418, 0]
+    },
+
+  },
+
+  {
+    "id" : "03_AlasB3_1p",
+    "name": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+    "position" : {
+        "cartographicDegrees" : [-73.58471797950, 4.07423653716, 0.00000000000]
+    },
+
+}, {
+    "id" : "04_LabFisica",
+    "name": "BLOQUE 4 - Ing Ambiental, Ing de Procesos y Lab Fisica",
+    "position" : {
+        "cartographicDegrees" : [-73.5845491544, 4.0739748425, 0.00000000000]
+    },
+}, {
+    "id" : "05_LabSuelos",
+    "name": "BLOQUE 5 - Laboratorio Suelos",
+    "position" : {
+        "cartographicDegrees" : [-73.5846170155, 4.0737947134, 0.00000000000]
+    },
+
+}, {
+    "id" : "06_LabAnatomia",
+    "name": "BLOQUE 6 - Laboratorio Anatomia y Morfologia Animal, Aulas B6-1 y B6-2",
+    "position" : {
+        "cartographicDegrees" : [-73.58463026620,	4.07345210614,	0.00000000000]
+    },
+
+}, {
+    "id" : "07_entrada1_facuagraria",
+    "name": "BLOQUE 7 - Ing Agronomica, Agroindustrial, Laboratorio Microbiologia Vegetal, fitopatologia y Fisiologia Vegetal",
+    "position" : {
+        "cartographicDegrees" : [-73.584821474779, 4.073746388297, 0]
+    },
+
+}, {
+  "id" : "08_AulaB8",
+  "name": "BLOQUE 8 - Aulas B8-1, B8-2, B8-3 Y B8-4",
+  "position" : {
+    "cartographicDegrees" : [-73.58508574090, 4.07403970313, 0.00000000000]
+  },
+}, {
+  "id" : "comedor",
+  "name": "Comedor Universitario",
+  "position" : {
+    "cartographicDegrees" : [-73.584821474779, 4.073746388297, 0]
+  },
+}, {
+  "id" : "10_Preu",
+  "name": "BLOQUE 10 - Division de Servicios Administrativos y PREU",
+  "position" : {
+    "cartographicDegrees" : [-73.58508257040, 4.07449910297, 0.00000000000]
+  },
+}, {
+  "id" : "11_counillanos",
+  "name": "BLOQUE 11 - Counillanos",
+  "position" : {
+    "cartographicDegrees" : [-73.58577450060, 4.07474041673, 0.00000000000]
+  },
+}, {
+  "id" : "12_Aulas12",
+  "name": "BLOQUE 12 - Aulas B12-1,B12-2,B12-3 y  B12-4, APULL, SINTRAUNICOL y SINTRADES",
+  "position" : {
+    "cartographicDegrees" : [-73.58548098430, 4.07443055016, 0.00000000000]
+  },
+}, {
+  "id" : "Sala de Audiovisuales 1 y 2",
+  "name": "BLOQUE 13 - Sala de Audiovisuales 1 y 2",
+  "position" : {
+    "cartographicDegrees" : [-73.5854487, 4.0741461, 0.00000000000]
+  },
+}, {
+  "id" : "14_LabBiologia",
+  "name": "BLOQUE 14 - Ing Agronomica, Agroindustrial, Laboratorio Microbiologia Vegetal, fitopatologia y Fisiologia Vegetal",
+  "position" : {
+    "cartographicDegrees" : [-73.58544265, 4.0740674, 0.00000000000]
+  },
+}, {
+  "id" : "15_FacHumanas",
+  "name": "Bloque 15 - FCHE, Lab Nutricion Animal y Lab Histopatologia y Aula Esp. de matematicas",
+  "position" : {
+    "cartographicDegrees" : [-73.585255786331, 4.073866715684, 0.0]
+  },
+}, {
+  "id" : "16_LabEnto",
+  "name": "BLOQUE 16 - Laboratorio Entomologia, Laboratorio Microbiologia Animal, y Aula especializada de Fisica",
+  "position" : {
+    "cartographicDegrees" : [-73.585800965283, 4.073814346530, 0.0]
+  },
+}, {
+  "id" : "17_LicMate",
+  "name": "BLOQUE 17 - Lic en Matematicas, Aulas B17-1, B17-2 y B17-3",
+  "position" : {
+    "cartographicDegrees" : [-73.5858224, 4.0740385, 0.0]
+  },
+}, {
+  "id" : "18_AulasB18",
+  "name": "BLOQUE 18 - Aulas B18-1, B18-2 y B18-3",
+  "position" : {
+    "cartographicDegrees" : [-73.58582360, 4.0740929, 0.00000000000]
+  },
+}, {
+  "id" : "19_LabElectro",
+  "name": "BLOQUE 19 - Laboratorio Electronica, Lab Biologia Molecular y Museo de Historia Natural",
+  "position" : {
+    "cartographicDegrees" : [-73.5860106, 4.0744325, 0.00000000000]
+  },
+}, {
+  "id" : "20_CienciasAgropecuarias",
+  "name": "BLOQUE 20 - FCARN, Medicina Veterinaria y Zootecnia y Of. Archivo y correspondencia",
+  "position" : {
+    "cartographicDegrees" : [-73.58593957900, 4.07458814282, 0.00000000000]
+  },
+}, {
+  "id" : "21_AulaB21",
+  "name": "BLOQUE 21 - Aulas B21-1, Of. SST y Centro de salud",
+  "position" : {
+    "cartographicDegrees" : [-73.585974777584, 4.074652252999, 0.0]
+  },
+}, {
+  "id" : "22_ClinicaVeter",
+  "name": "BLOQUE 22 - Clinica Veterinaria, Lab Clinico Veterinario y Lab Genetica y Reproduccion Animal",
+  "position" : {
+    "cartographicDegrees" : [-73.58631885560, 4.07397087249, 0.00000000000]
+  },
+}, {
+  "id" : "23_HospiCaninos",
+  "name": "BLOQUE 23 - Hospitalizacion de Caninos y Felinos",
+  "position" : {
+    "cartographicDegrees" : [-73.58655206020, 4.07381245774, 0.00000000000]
+  },
+}, {
+  "id" : "24_LabFisiologia",
+  "name": "BLOQUE 24 - Laboratorio Fisiologia Veterinaria y Laboratorio Parasitologia Veterinaria",
+  "position" : {
+    "cartographicDegrees" : [-73.58630720240, 4.07375891355, 0.00000000000]
+  },
+}, {
+  "id" : "25_LabToxi",
+  "name": "BLOQUE 25 - Laboratorio Toxicologia y Biotecnologia",
+  "position" : {
+    "cartographicDegrees" : [-73.586327569231, 4.073667161772, 0.00000000000]
+  },
+}, {
+  "id" : "27_AulaB27",
+  "name": "BLOQUE 27 - Aula B27-1 y Of Servicios Generales",
+  "position" : {
+    "cartographicDegrees" : [-73.585233848421, 4.073201372496, 0.0]
+  },
+}, {
+  "id" : "28_SalonGimnasio",
+  "name": "BLOQUE 28 - Salon de Gimnasia",
+  "position" : {
+    "cartographicDegrees" : [-73.584941503082, 4.072942654612, 0.0]
+  },
+}, {
+  "id" : "29_AulasB29",
+  "name": "BLOQUE 29 - Aulas B29-1 y B29-2",
+  "position" : {
+    "cartographicDegrees" : [-73.58502380230, 4.07250427920, 0.00000000000]
+  },
+}, {
+  "id" : "31_LabBiotecno",
+  "name": "BLOQUE 31 - Laboratorio Biotecnologia Vegetal",
+  "position" : {
+    "cartographicDegrees" : [-73.584223536666, 4.073828011019, 0.0]
+  },
+}, {
+  "id" : "32_SalaDesarrollo",
+  "name": "BLOQUE 32 - Sala de Desarrollo y Estudio Multimedia",
+  "position" : {
+    "cartographicDegrees" : [ -73.584126277530, 4.074896089401, 0.0]
+  },
+}, {
+  "id" : "34_iallprin",
+  "name": "BLOQUE 34 -Direccion IALL, Auditorio IALL y Lab Ictiopatologia",
+  "position" : {
+    "cartographicDegrees" : [-73.58254632100,	4.07358435183,	0.00000000000]
+  },
+}, {
+  "id" : "36_iallresid.",
+  "name": "BLOQUE 36 - IALL Residencias",
+  "position" : {
+    "cartographicDegrees" : [-73.58278592990,	4.07323387903,	0.00000000000]
+  },
+}, {
+  "id" : "37_iallprofes",
+  "name": "BLOQUE 37 - IALL Of. de Profesores",
+  "position" : {
+    "cartographicDegrees" : [-73.58261512380,	4.07328255878,	0.00000000000]
+  },
+},{
+  "id" : "40_iallaguas",
+  "name": "BLOQUE 40 - Laboratorio Calidad de Aguas y Dinamica de Nutrientes",
+  "position" : {
+    "cartographicDegrees" : [-73.58224131770,	4.07355332096,	0.00000000000]
+  },
+}, {
+  "id" : "41_LabAlimento",
+  "name": "BLOQUE 41 - Laboratorio Alimentos Vivo-Ecotoxicologia",
+  "position" : {
+    "cartographicDegrees" : [-73.582276882624, 4.073685266301, 0.0]
+  },
+}, {
+  "id" : "42_iallbodega",
+  "name": "BLOQUE 42 - Bodega de Herramientas y de Insumos Agricolas",
+  "position" : {
+    "cartographicDegrees" : [-73.584821474779, 4.073746388297, 0]
+  },
+}, {
+  "id" : "Einstein",
+  "name": "EDIFICIO 4 - Albert Einstein",
+  "position" : {
+    "cartographicDegrees" : [-73.58412126, 4.07415643, 0]
+  },
+}, {
+  "id" : "Coliseo",
+  "name": "Coliseo",
+  "position" : {
+    "cartographicDegrees" : [-73.58384191, 4.07293755, 0]
+  },
+}, {
+  "id" : "Ediadmi",
+  "name": "EDIFICIO 2 -  Administrativo",
+  "position" : {
+    "cartographicDegrees" : [-73.58485473, 4.07496780, 0]
+  },
+}, {
+  "id" : "Biblioteca",
+  "name": "EDIFICIO 1 - Biblioteca Jorge Boshell y Edf. Servicios estudiantiles",
+  "position" : {
+    "cartographicDegrees" : [-73.584821474779, 4.073746388297, 0]
+  },
+}, {
+  "id" : "auditorio",
+  "name": "Auditorio Eduardo Carranza",
+  "position" : {
+    "cartographicDegrees" : [-73.58507549, 4.075087118, 0]
+  },
+}, {
+  "id" : "FCBI",
+  "name": "EDIFICIO 3 - Facultad Ciencias Basicas e Ingenieria",
+  "position" : {
+    "cartographicDegrees" : [-73.58460463290, 4.07414955302, 0.00000000000]
+  },
+}, {
+  "id" : "Da_vinci",
+  "name": "EDIFICIO 5 - Leonardo da Vinci",
+  "position" : {
+    "cartographicDegrees" : [-73.5842504, 4.0747137, 0.0]
+  },
+}, {
+  "id" : "bienestar",
+  "name": "EDIFICIO 6 - Bienestar Universitario",
+  "position" : {
+    "cartographicDegrees" : [-73.58528196820, 4.07350933825, 0.00000000000]
+  },
+}, {
+  "id" : "AlmacenInven",
+  "name": "EDIFICIO 7 - Almacen e inventarios",
+  "position" : {
+    "cartographicDegrees" : [-73.5861677, 4.07345848318, 0.00000000000]
+  },
+}, {
+  "id" : "postgrados",
+  "name": "Postgrados",
+  "position" : {
+    "cartographicDegrees" : [-73.5818252929,  4.07733279947,   2]
+  },
+},
+
+];
+
+
+var viewer = new Cesium.Viewer('cesiumContainer', {
+  shouldAnimate: true,
+  homeButton: false,
+  infoBox: false,
+  timeline: false,
+  animation: false,
+  sceneModePicker: false,
+  homeButton: false,
+  baseLayerPicker: false,
+  geocoder: new LabelCollectionGeocoder()
+
+
+});
+//viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
+
+      /* Sandcastle.addToolbarButton("Iniciar Ruta de Navegacion", function () {
+         viewer.dataSources
+                 .add(Cesium.CzmlDataSource.load("czml/" + czml[id_ruta].id + ".czml"))
+                 .then(function (ds) {
+                   viewer.trackedEntity = ds.entities.getById("path");
+                 });
+       });*/
+
+
+//var tax_labels = viewer.dataSources.add(new Cesium.LabelCollection() );
+var tax_labels = viewer.scene.primitives.add(new Cesium.LabelCollection() );
+for (var i = 1; i < czml.length; i++) {
+   tax_labels.add( {position : Cesium.Cartesian3.fromDegrees(czml[i].position.cartographicDegrees[0], czml[i].position.cartographicDegrees[1]), text : czml[i].name, font : '15.75px sans-serif', distanceDisplayCondition : new Cesium.DistanceDisplayCondition(104424.000000,250000.000000) });
+}
+//Sandcastle_End
+    Sandcastle.finishedLoading();
+
+if (typeof Cesium !== 'undefined') {
+    window.startupCalled = true;
+    window.startup(Cesium).catch((error) => {
+      "use strict";
+      console.error(error);
+    });
+}
+</script>
+</body>
+</html>

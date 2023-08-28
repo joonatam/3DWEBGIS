@@ -1,0 +1,51 @@
+[
+    {
+      "id": "document",
+      "name": "CZML Path",
+      "version": "1.0",
+      "clock": {
+        "interval": "2028-09-04T10:00:00Z/2028-09-04T15:00:00Z",
+        "currentTime": "2028-09-04T10:00:00Z",
+        "multiplier": 10
+      }
+    },
+    {
+        "id": "path1",
+        "name": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+                      "description":
+                              "<p> Nivel: 1 <p>- Aula B3-1 <br>- Aula B3-2 <br>- Aula B3-3 </p>",
+                      "availability": "2028-09-04T10:00:00Z/2028-09-04T15:00:00Z",
+        "label": {
+          "fillColor": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "font": "12pt Lucida Console",
+          "horizontalOrigin": "LEFT",
+          "pixelOffset": {
+            "cartesian2": [8, 0]
+          },
+          "style": "FILL",
+          "text": "BLOQUE 3 - Aulas B3-1, B3-2,B3-3 y B3-4",
+          "showBackground": true,
+          "backgroundColor": {
+            "rgba": [255, 89, 57, 255]
+          }
+        },
+        "point": {
+          "color": {
+            "rgba": [255, 255, 255, 255]
+          },
+          "outlineColor": {
+            "rgba": [255, 0, 0, 255]
+          },
+          "outlineWidth": 4,
+          "pixelSize": 20,
+          "eyeOffset": {
+            "cartesian": [0.0, 0.0, 0.0]
+          }
+        },
+        "position": {
+          "cartographicDegrees": [-73.584755038, 4.0743014977, 16]
+        }
+      }
+]

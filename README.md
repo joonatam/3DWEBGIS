@@ -16,22 +16,16 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 
 ## Instalacion
 - Bash
-1. Clona este repositorio en la maquina local
-- git clone ____
-3. Navega hasta el directorio del proyecto
-- cd SIGO3D
-4. Navega hasta el archivo index.html para ver la plataforma en funcionamiento
-- cd index.html
+1. Clona este repositorio en la maquina local: `git clone ____`
+3. Navega hasta el directorio del proyecto: `cd SIGO3D`
+4. Navega hasta el archivo index.html para ver la plataforma en funcionamiento: `cd index.html`
 
 ## Contribucion
 
-1. Realiza un fork del repositorio:
-2. Crea una rama para los cambios:
-- git checkout -b mi-cambio
-3. Realiza tus cambios y realiza commits:
-- git commit -m "agrega mi cambio"
-4. Haz push a tu rama
-- git push origin mi-cambio
+1. Realiza un fork del repositorio
+2. Crea una rama para los cambios: `git checkout -b mi-cambio`
+3. Realiza tus cambios y realiza commits: `git commit -m "agrega mi cambio"`
+4. Haz push a tu rama: `git push origin mi-cambio`
 5. Abre una solicitud de extraccion en Git para que los camcios sean revisados
 
   

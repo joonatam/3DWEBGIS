@@ -16,7 +16,7 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 
 ## Instalacion
 
-#Bash
+Bash
 
 1. Clona este repositorio en la maquina local
 - git clone ____

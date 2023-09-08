@@ -15,20 +15,13 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 -  [Webstorm](https://www.jetbrains.com/webstorm/download/) - Entorno de desaollo integrado, no hay una version especifica para su recomendacion.
 
 ## Instalacion
-
-Bash
-
+-Bash
 1. Clona este repositorio en la maquina local
-
-   
-git clone ____
-
-
+-git clone ____
 3. Navega hasta el directorio del proyecto
-
-cd SIGO3D
+-cd SIGO3D
 4. Navega hasta el archivo index.html para ver la plataforma en funcionamiento
-cd index.html
+-cd index.html
 
 ## Contribucion
 

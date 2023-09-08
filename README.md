@@ -12,10 +12,10 @@ Este proyecto es una plataforma GIS 3D que utiliza CesiumJS para la visualizacio
 Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo siguiente:
 - [Node.js](https://nodejs.org/) - para ejecutar el servidor de desarrollo, se recomienda tener la version 10 o superior.
 - [Git](https://git-scm.com/) - para clonar y gestionar el repositorio, no hay una version especifica para su recomendacion.
--  [Webstorm](https://www.jetbrains.com/webstorm/download/) - Entorno de desaollo integrado, no hay una version especifica para su recomendacion.
+- [Webstorm](https://www.jetbrains.com/webstorm/download/) - Entorno de desaollo integrado, no hay una version especifica para su recomendacion.
 
 ## Instalacion
--Bash
+- Bash
 1. Clona este repositorio en la maquina local
 - git clone ____
 3. Navega hasta el directorio del proyecto
@@ -32,7 +32,7 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 - git commit -m "agrega mi cambio"
 4. Haz push a tu rama
 - git push origin mi-cambio
-5.Abre una solicitud de extraccion en Git para que los camcios sean revisados
+5. Abre una solicitud de extraccion en Git para que los camcios sean revisados
 
   
 

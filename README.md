@@ -25,7 +25,7 @@ Bash
 3. Navega hasta el archivo index.html para ver la plataforma en funcionamiento
 - cd index.html
 
-##Contribucion
+## Contribucion
 
 1.Realiza un fork del repositorio:
 2. Crea una rama para los cambios:

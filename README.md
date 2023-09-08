@@ -19,10 +19,12 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 Bash
 
 1. Clona este repositorio en la maquina local
+   
 git clone ____
-2. Navega hasta el directorio del proyecto
+3. Navega hasta el directorio del proyecto
+
 cd SIGO3D
-3. Navega hasta el archivo index.html para ver la plataforma en funcionamiento
+4. Navega hasta el archivo index.html para ver la plataforma en funcionamiento
 cd index.html
 
 ## Contribucion

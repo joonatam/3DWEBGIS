@@ -27,7 +27,7 @@ Bash
 
 ## Contribucion
 
-1.Realiza un fork del repositorio:
+1. Realiza un fork del repositorio:
 2. Crea una rama para los cambios:
 - git checkout -b mi-cambio
 3. Realiza tus cambios y realiza commits:

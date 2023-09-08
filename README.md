@@ -1,6 +1,6 @@
 # SIGO 3D: Proyecto WebGIS 3D con CesiumJS
 
-Este prpyecto es una plataforma GIS 3D que utiliza CesiumJS para la visualizacion de datos geoespaciales en un entorno 3D. Proporcionando una experiencia inmersiva en el campus Barcelona de la Universidad de los Llanos
+Este proyecto es una plataforma GIS 3D que utiliza CesiumJS para la visualizacion de datos geoespaciales en un entorno 3D. Proporcionando una experiencia inmersiva en el campus Barcelona de la Universidad de los Llanos
 
 ## Caracteristicas
 

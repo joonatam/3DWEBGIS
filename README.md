@@ -16,8 +16,8 @@ Antes de comenzar a utilizar este proyecto, asegurese de tener instalado lo sigu
 
 ## Instalacion
 - Bash
-1. Clona este repositorio en la maquina local: `git clone ____`
-3. Navega hasta el directorio del proyecto: `cd SIGO3D`
+1. Clona este repositorio en la maquina local: `git clone https://gitlab.com/adalab_unillanos/docker_sigo3d.git `
+3. Navega hasta el directorio del proyecto: `cd docker_sigo3d.git`
 4. Navega hasta el archivo index.html para ver la plataforma en funcionamiento: `cd index.html`
 
 ## Contribucion
